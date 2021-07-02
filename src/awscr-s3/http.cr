@@ -136,7 +136,7 @@ module Awscr::S3
 
     # :nodoc:
     private def http
-      @client ||= create_client(@endpoint, @signer)
+      @client = create_client(@endpoint, @signer)
     end
 
     private def create_client(endpoint, signer)
